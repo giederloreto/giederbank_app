@@ -27,7 +27,12 @@ class GiederBank extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Image.asset('')
+            
+            ClipRRect(
+              borderRadius: BorderRadius.circular(300.0),
+              child: Image.asset('images/gieder.jpg',
+              ),
+            ),
           ],
         ),
       ),
