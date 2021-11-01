@@ -25,13 +25,21 @@ class GiederBank extends StatelessWidget {
             ),
           )),
         ),
-        body: Column(
+        body: ListView(
           children: [
-            
-            ClipRRect(
-              borderRadius: BorderRadius.circular(300.0),
-              child: Image.asset('images/gieder.jpg',
-              ),
+            Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(300.0),
+                  child: Image.asset(
+                    'images/gieder.jpg',
+                  ),
+                ),
+                const CircleAvatar(
+                  radius: 100,
+                  backgroundImage: AssetImage('images/gieder.jpg'),
+                )
+              ],
             ),
           ],
         ),
