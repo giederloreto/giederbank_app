@@ -28,16 +28,25 @@ class GiederBank extends StatelessWidget {
         body: ListView(
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(300.0),
-                  child: Image.asset(
-                    'images/gieder.jpg',
+                InkWell(
+                  onTap: (){},
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(300.0),
+                    child: Image.asset(
+                      'images/gieder.jpg',
+                    ),
                   ),
                 ),
-                const CircleAvatar(
-                  radius: 100,
-                  backgroundImage: AssetImage('images/gieder.jpg'),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: EdgeInsets.all(16.0),
+                    height: 100,
+                    width: 150,
+                    color: Colors.green,
+                  ),
                 )
               ],
             ),
