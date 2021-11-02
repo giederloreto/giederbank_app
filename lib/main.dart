@@ -25,29 +25,73 @@ class GiederBank extends StatelessWidget {
             ),
           )),
         ),
-        body: ListView(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Column(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {},
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(300.0),
+                  child: Image.asset(
+                    'images/gieder.jpg',
+                  ),
+                ),
+              ),
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
                   onTap: (){},
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(300.0),
-                    child: Image.asset(
-                      'images/gieder.jpg',
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: EdgeInsets.all(8.0),
+                      height: 100,
+                      width: 150,
+                      color: Colors.amberAccent,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'My Contacts',
+                            style:
+                                TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          Icon(Icons.contacts),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    padding: EdgeInsets.all(16.0),
-                    height: 100,
-                    width: 150,
-                    color: Colors.green,
+                InkWell(
+                  onTap: (){},
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: EdgeInsets.all(8.0),
+                      height: 100,
+                      width: 150,
+                      color: Colors.amberAccent,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Transfers',
+                            style:
+                                TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          Icon(Icons.monetization_on),
+                        ],
+                      ),
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ],
